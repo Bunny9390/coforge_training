@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function add(a=10,b=10){
+	console.log(a+b);
+}
+add();
+add(100);
+add(100,200);
+
+function add(a,b,...args) {
+	console.log(a+b);
+	let total = 0;
+	for(let n of args){
+		total = total+n;
+	}
+	console.log(total);
+}
+add(100,200,12,23,15);
+
+const odd = [1,2,3];
+const combined = [2,3,4,...odd]; //spread op
+console.log(combined);
+
+let s1 = `ih`;
+console.log(s1);
+
+let arr = [10, 20, 30];
+let [a, b, c] = arr;
+console.log(a); 
+console.log(b); 
+console.log(c); 
+
+let per = {
+		fn : "bunny",
+		ln : "engu"
+}
+let {fn:fname,ln:lname} = per
+console.log(fname);
+
+const adds = (a, b) => {
+    return a + b;
+};
+console.log(adds(10, 20));
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

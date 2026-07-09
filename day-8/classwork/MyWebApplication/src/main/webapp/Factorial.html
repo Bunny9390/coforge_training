@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Table</title>
+
+    <script>
+        function showTable() {
+            var n = parseInt(document.getElementById("num").value);
+            var output = "<table border='1' cellpadding='8'>";
+            output += "<tr><th>Number</th><th>Factorial</th></tr>";
+
+            for (var i = 1; i <= n; i++) {
+                var fact = 1;
+
+                for (var j = 1; j <= i; j++) {
+                    fact = fact * j;
+                }
+
+                output += "<tr><td>" + i + "</td><td>" + fact + "</td></tr>";
+            }
+
+            output += "</table>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+
+<body>
+
+    Enter Number
+    <input type="number" id="num">
+
+    <br><br>
+
+    <button onclick="showTable()">Display Factorial Table</button>
+
+    <br><br>
+
+    <div id="result"></div>
+
+</body>
+</html>
