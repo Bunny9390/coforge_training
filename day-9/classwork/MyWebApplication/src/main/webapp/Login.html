@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Form</title>
+
+<link rel="stylesheet" href="Loginstyle.css">
+
+</head>
+
+<body>
+<form action="Login" method="post" id="loginForm">
+
+<div class="logindiv">
+
+    <h2>Login Form</h2>
+
+    <table>
+
+        <tr>
+            <td>Username</td>
+            <td><input type="text" placeholder="Enter Username" name="username"></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" id="password" placeholder="Enter Password"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Login" class="loginbutton">
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+</form>
+<div style="text-align:center;margin-top:10px;" id="loginResult"></div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var username = (document.querySelector('input[name="username"]').value || '').trim();
+    var password = (document.getElementById('password').value || '').trim();
+    var result = document.getElementById('loginResult');
+
+    if(username === 'admin' && password === '123'){
+        // redirect to static success page for local testing
+        window.location.href = 'LoginSuccess.html';
+        return;
+    } else {
+        // redirect to static failure page for local testing
+        window.location.href = 'LoginFailure.html';
+        return;
+    }
+});
+
+// clear result while typing
+document.querySelectorAll('#loginForm input').forEach(function(inp){
+    inp.addEventListener('input', function(){ document.getElementById('loginResult').innerHTML = ''; });
+});
+</script>
+</body>
+</html>

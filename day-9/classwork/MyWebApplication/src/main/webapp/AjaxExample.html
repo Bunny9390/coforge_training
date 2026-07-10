@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f5f5f5;
+        }
+
+        table{
+            width:70%;
+            margin:40px auto;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:2px solid gray;
+            padding:10px;
+        }
+
+        .heading{
+            font-size:35px;
+            font-weight:bold;
+            text-align:center;
+            padding:20px;
+        }
+
+        input,textarea{
+            width:300px;
+            padding:5px;
+        }
+
+        textarea{
+            height:60px;
+        }
+
+        .gender input{
+            width:auto;
+        }
+
+        .submit{
+            width:90px;
+            padding:8px;
+            font-size:16px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="AssingmetProblem3.css">
+    <script type="text/javascript">
+
+    function passwordstrenght() {
+        var password = document.getElementById("pwd").value || "";
+        var resultEl = document.getElementById("result");
+
+        if (password.length <= 3) {
+            resultEl.innerHTML = "<font color='red'><b>Weak</b></font>";
+        } else if (password.length <= 8) {
+            resultEl.innerHTML = "<font color='orange'><b>Good</b></font>";
+        } else {
+            resultEl.innerHTML = "<font color='green'><b>Very Good</b></font>";
+        }
+    }
+
+    function EmailCheck() {
+        var email = document.getElementById("email").value || "";
+        var resultEl = document.getElementById("result1");
+        var trimmed = email.trim();
+        var lower = trimmed.toLowerCase();
+
+        // basic email regex
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (trimmed === "") {
+            resultEl.innerHTML = "";
+            return;
+        }
+
+        if (lower === "avi@gmail.com") {
+            resultEl.innerHTML = "<font color='green'><b>Approved</b></font>";
+        } else if (emailRegex.test(trimmed)) {
+            resultEl.innerHTML = "<font color='green'><b>Valid</b></font>";
+        } else {
+            resultEl.innerHTML = "<font color='red'><b>Not Valid</b></font>";
+        }
+    }
+
+    </script>
+</head>
+<body>
+
+<form>
+<table>
+
+<tr>
+    <th colspan="2" class="title">Registration Form</th>
+</tr>
+
+<tr>
+    <td>Student Name</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Father's Name</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Mother's Name</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Date of Birth</td>
+    <td><input type="date"></td>
+</tr>
+
+<tr>
+    <td>Gender</td>
+<td>
+    <div class="gender">
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+    </div>
+</td>
+</tr>
+
+<tr>
+    <td>Email ID</td>
+    <td>
+    <input type="email" id="email" oninput="EmailCheck()">
+        <span id="result1"></span>
+     </td>
+    
+</tr>
+
+<tr>
+<td>Password</td>
+<td>
+    <input type="password" id="pwd" onkeyup="passwordstrenght()">
+    <span id="result"></span>
+</td>
+</tr>
+
+<tr>
+    <td>Mobile No.</td>
+    <td><input type="tel"></td>
+</tr>
+
+<tr>
+    <td>Address</td>
+    <td><textarea rows="5" cols="30"></textarea></td>
+</tr>
+
+<tr>
+    <td>State</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>City</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td><input type="submit" value="Submit"></td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>
