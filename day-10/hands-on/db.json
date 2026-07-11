@@ -1,0 +1,50 @@
+{
+  "employees": [
+    {
+      "id": "EMP101",
+      "name": "John",
+      "age": 25,
+      "department": "IT",
+      "designation": "Software Engineer",
+      "salary": 50000,
+      "email": "john@gmail.com"
+    },
+    {
+      "id": "EMP102",
+      "name": "Bunny",
+      "age": 21,
+      "department": "AIML",
+      "designation": "ML Engineer",
+      "salary": 60000,
+      "email": "bunny@gmail.com"
+    },
+    {
+      "sid": 102,
+      "sname": "Bunny",
+      "semail": "bunny@gmail.com",
+      "id": "vv8n3iVEhBM"
+    },
+    {
+      "sid": 102,
+      "sname": "Bunny",
+      "semail": "bunny@gmail.com",
+      "id": "1KkWuJImV0w"
+    },
+    {
+      "sid": 102,
+      "sname": "Bunny",
+      "semail": "bunny@gmail.com",
+      "id": "smmh2lHII70"
+    },
+    {
+      "id": "yHQJFMkKFnI",
+      "name": "Rahul",
+      "age": 26,
+      "department": "Finance",
+      "designation": "Accountant",
+      "salary": 55000,
+      "email": "rahul@gmail.com"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
