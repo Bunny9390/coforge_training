@@ -1,0 +1,31 @@
+<br>
+
+<button [ngStyle]="myButtonStyle" (click)="showDiv()">
+  Show/Hide Div
+</button>
+
+<br>
+
+<div [ngClass]="myDivStyle" *ngIf="flag">
+  {{ message }}
+
+  <ul>
+    <li *ngFor="let vehicle of vehicles"
+        (click)="setSelectedVehicle(vehicle)">
+      {{ vehicle }}
+    </li>
+  </ul>
+
+  <br>
+
+  You have selected: {{ selectedVehicle }}
+  <div [ngSwitch]="selectedVehicle">
+    <img src="Car.jpg" *ngSwitchCase="'Car'" width="200" height="200"/>
+    <img src="bike.jpg" *ngSwitchCase="'Bike'" width="200" height="200"/>
+    <img src="Bus.jpg" *ngSwitchCase="'Bus'" width="200" height="200"/>
+    <img src="truck.jpg" *ngSwitchCase="'Truck'" width="200" height="200"/>
+    
+    <font color="red" *ngSwitchDefault> Invalid selection </font>
+
+  </div>
+</div>
