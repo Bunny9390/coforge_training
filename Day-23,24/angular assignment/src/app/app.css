@@ -1,0 +1,13 @@
+.MyHeading {
+    color: red;
+    text-align: center;
+}
+.zoomin {
+    color: blue;
+    font-size: 50px;
+}
+
+.zoomout {
+    color: blue;
+    font-size: 5px;
+}

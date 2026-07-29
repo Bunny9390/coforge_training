@@ -1,0 +1,48 @@
+<!-- <h1 class="MyHeading"> welcome to an Angular app </h1>
+<b><app-childapp></app-childapp></b>
+
+<h1>Angular one way Property Binding - Interpolation</h1>
+<br><b [ngStyle]="myStyle">name : {{name}} </b>
+<br><b [ngClass]="myClass">name : {{name}} </b>
+<br> age : {{age}}
+<br> email : {{email}}
+<br> email : <input type="text" value="{{email}}"/>
+<br>Addition: {{getAddition(5, 10)}}
+<br>Image : <img src="{{imagePath}}" [width]="width" [height]="height"/>
+
+<h1>Angular one way Property Binding - Property Binding</h1>
+<br> email : <input type="text" [value]="email"/> 
+<br> <img [src]="imagePath" [width]="width" [height]="height"/>
+
+<br>
+<button (click)="changeName()">ChangeName</button>
+
+<br>
+<button (click) = "zoominout()">Zoom In/Out</button>
+
+<br>
+Enter your firstName : <input type="text" [(ngModel)]="fname"/>
+<br>
+Welcome {{fname}} 
+
+<!-- <app-structural-component></app-structural-component>
+<app-addition></app-addition>
+<app-subraction></app-subraction>
+<app-structural-directive></app-structural-directive>
+<app-home-component></app-home-component>
+<app-about-component></app-about-component>
+<app-contact-component></app-contact-component> --> -->
+<div class="myDiv">
+<table width="100%" [cellSpacing]="15" [cellPadding]="10">
+<tr>
+<td><a routerLink="Home">Home</a></td>
+<td><a routerLink="Contact">Contact</a></td>
+<td><a routerLink="About">About</a></td>
+</tr>
+</table>
+<hr/>
+<div>
+   This is the space for New Component.
+   <router-outlet></router-outlet>
+</div>
+</div>
