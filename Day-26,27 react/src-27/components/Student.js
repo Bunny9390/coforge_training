@@ -1,0 +1,16 @@
+function Student(props){
+
+    return(
+        <div>
+            <h2>Student Details</h2>
+
+            <p>Name : {props.name}</p>
+            <p>Course : {props.course}</p>
+            <p>Age : {props.age}</p>
+            <p>City : {props.city}</p>
+
+        </div>
+    );
+}
+
+export default Student;
